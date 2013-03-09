@@ -37,4 +37,4 @@ deploy: clean build
 	@rsync -avq --delete-after _site/ han:/var/www/braincrafted.com
 	@echo "${CHECK} Done"
 
-.PHONY: build clean deploy
+.PHONY: build build-css build-compass build-jekyll clean clean-jekyll clean-compass deploy
