@@ -1,0 +1,69 @@
+@import "normalize";
+
+$bc_color: #ff6036;
+
+body {
+    color: #222;
+    font: 400 1.1em "ff-tisa-web-pro", serif;
+}
+
+a {
+    &:link, &:active, &:visited {
+        color: #222;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font: bold 5em "ff-tisa-web-pro", serif;
+    text-align: center;
+    a {
+        &:link, &:active, &:visited, &:hover {
+            color: $bc_color;
+            text-decoration: none;
+        }
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.page-header {
+    @extend .wrapper;
+}
+
+.content {
+    @extend .wrapper;
+}
+
+.project-list {
+    list-style: none;
+    padding-left: 0
+}
+
+.page-footer {
+    @extend .wrapper;
+    margin: {
+        top: 5em;
+        bottom: 2em;
+    }
+    color: #666;
+    font: 0.75em "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    a {
+        &:link, &:active, &:visited {
+            color: #666;
+        }
+    }
+}
+
