@@ -1,15 +1,16 @@
 @import "normalize";
 
-$bc_color: #ff6036;
+$bc-color: #ff6036;
+$link-color: #232323;
 
 body {
-    color: #222;
+    color: $link-color;
     font: 400 1.1em "ff-tisa-web-pro", serif;
 }
 
 a {
     &:link, &:active, &:visited {
-        color: #222;
+        color: $link-color;
     }
     &:hover {
         text-decoration: none;
@@ -21,7 +22,7 @@ h1 {
     text-align: center;
     a {
         &:link, &:active, &:visited, &:hover {
-            color: $bc_color;
+            color: $bc-color;
             text-decoration: none;
         }
     }
@@ -30,7 +31,6 @@ h1 {
 h2 {
     text-align: center;
 }
-
 
 .wrapper {
     max-width: 800px;
@@ -64,6 +64,14 @@ h2 {
         &:link, &:active, &:visited {
             color: #666;
         }
+    }
+
+    .lion {
+        margin: {
+            top: 5em;
+            bottom: 5em;
+        }
+        text-align: center;
     }
 }
 
