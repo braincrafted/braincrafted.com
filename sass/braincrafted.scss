@@ -29,6 +29,10 @@ h1 {
         font-size: 3em;
     }
 
+    @media screen and (max-width: 320px) {
+        font-size: 2.5em;
+    }
+
     a {
         &:link, &:active, &:visited, &:hover {
             color: $bc-color;
