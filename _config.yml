@@ -1,1 +1,3 @@
-exclude: [ "README.md", "config.rb", "sass", "Makefile" ]
+exclude: [ "README.md", "config.rb", "sass", "Makefile", "js-dev" ]
+pygments: true
+permalink: /:title

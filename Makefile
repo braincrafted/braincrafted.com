@@ -1,13 +1,12 @@
 CHECK          = \033[32m✔\033[39m
-SASS_MASTER    = sass/master.scss
-CSS_MASTER     = css/master.css
-MIN_CSS_MASTER = css/master.min.css
 
 build: build-css build-js build-jekyll
 
 build-css: build-compass
 	@echo "Minifiying CSS...                     \c"
-	@ycssmin ${CSS_MASTER} > ${MIN_CSS_MASTER}
+	@cat css-dev/github.css css/braincrafted.css > css/braincrafted.tmp.css
+	@ycssmin css/braincrafted.tmp.css > css/braincrafted.min.css
+	@rm css/braincrafted.css css/braincrafted.tmp.css
 	@echo "${CHECK} Done"
 
 build-compass:
@@ -22,7 +21,9 @@ build-jekyll:
 
 build-js:
 	@echo "Compiling and minifying JavaScript... \c"
-	@@uglifyjs js/picturefill.js > js/braincrafted.min.js
+	@cat js-dev/picturefill.js js-dev/highlight.pack.js js-dev/braincrafted.js > js/braincrafted.tmp.js
+	@uglifyjs js/braincrafted.tmp.js > js/braincrafted.min.js
+	@rm js/braincrafted.tmp.js
 	@echo "${CHECK} Done"
 
 clean: clean-compass clean-jekyll clean-js

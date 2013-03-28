@@ -20,6 +20,15 @@ a {
 h1 {
     font: bold 5em "ff-tisa-web-pro", serif;
     text-align: center;
+
+    @media screen and (max-width: 700px) {
+        font-size: 4em;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 3em;
+    }
+
     a {
         &:link, &:active, &:visited, &:hover {
             color: $bc-color;
@@ -30,6 +39,14 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+pre {
+    font-size: 0.90em;
+}
+
+hr {
+    border: 1px solid $bc-color;
 }
 
 .wrapper {
@@ -46,9 +63,16 @@ h2 {
     @extend .wrapper;
 }
 
-.project-list {
+.project-list, .posts {
     list-style: none;
     padding-left: 0
+}
+
+.footnotes {
+    font-size: 0.85em;
+    p {
+        display: inline;
+    }
 }
 
 .page-footer {
