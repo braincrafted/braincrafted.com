@@ -1,0 +1,57 @@
+---
+layout: default
+title: Last Track Widget for StatusBoard by Panic
+---
+
+<h2>{{ page.title }}</h2>
+
+<p><a href="http://www.panic.com/statusboard/">StatusBoard</a> is a new app from Panic that can show data in a beautiful way. The greatest thing is that you can add your own widgets to StatusBoard.</p>
+
+<p>Last Track displays the last track you listened to in StatusBoard. You need a Last.fm account to make things work.<p>
+
+<div class="lasttrack_screenshot">
+    <img src='/statusboard/lasttrack/screenshot.png'>
+</div>
+
+<h3>Install Last Track</h3>
+
+<ol>
+    <li>
+        <label for="lasttrack_username">Enter your last.fm username:</label>
+        <input type="text" id="lasttrack_username" onkeyup="updateLastTrackInstallUrl();">
+    </li>
+
+    <li>
+        <a href="" id="lasttrack_install_url">Click this link on your iPad to add Last Track to your StatusBoard</a>
+    </li>
+</ol>
+
+<style>
+.lasttrack_screenshot {
+    padding: 5px;
+    background: #000;
+    text-align: center;
+}
+#lasttrack_install_url {
+    text-decoration: line-through;
+}
+#lasttrack_install_url.active {
+    text-decoration: underline;
+}
+</style>
+
+<script>
+function updateLastTrackInstallUrl() {
+    var username = document.getElementById('lasttrack_username').value;
+    var link = document.getElementById('lasttrack_install_url');
+    console.log(username);
+    if (null === username || '' === username) {
+        link.className = '';
+    } else {
+        link.className = 'active';
+        link.setAttribute('href', 'panicboard://?url=' + encodeURIComponent('http://statusboard.braincrafted.com/lasttrack/?username='+username) + '&panel=diy&sourceDisplayName=' + encodeURIComponent('Braincrafted'));
+    }
+}
+updateLastTrackInstallUrl();
+</script>
+
