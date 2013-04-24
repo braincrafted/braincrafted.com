@@ -19,7 +19,7 @@ In PHP there are several functions to execute a command, for example, `exec` and
 There three important things in this snippet:
 
 - The output (`STDOUT`) of the script must be directed to a file. In this case `> /dev/null` indicates that I'm not interested in the output.
-- The errors (`STDERR`) also must be directed to a file. `2>&1` means that `STDERR` is redirected into `STDOUT` and therefore into nirvana.
+- The errors (`STDERR`) also must be directed to a file. `2>&1` means that `STDERR` is redirected into `STDOUT` and therefore into the nirvana.
 - The final `&` tells the command to execute in the background.
 
 Of course it would also be possible to redirect `STDOUT` and `STDERR` to a file. In my situation this was not necessary since the command is part of an application with an internal log system.
@@ -48,7 +48,7 @@ It is now relatively easy to retrieve the status of the process. *The following 
 
 At this point I have everything I need and the only thing left to do is pack the code in a class with an easy-to-use interface:
 
-    namespace Bc\BackgroundProcess\BackgroundProcess;
+    namespace Bc\BackgroundProcess;
 
     class BackgroundProcess
     {
@@ -104,6 +104,16 @@ It's now relatively easy to execute a command in a background process:
 In this example the command `sleep 5` is executed in the background. As long as the process is running a dot is printed every second.
 
 *Please note: If the parent process continues to run while the child process(es) run(s) in the background you should use a more robust solution, for example, the [Symfony Process](https://github.com/symfony/Process) component.*
+
+**Update:** I created a library using the code above. You can find it on Github: [BcBackgroundProcess](https://github.com/braincrafted/background-process).
+
+It is also possible to install the package through composer:
+
+    {
+        "require": {
+            "braincrafted/background-process": "dev-master"
+        }
+    }
 
 Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @braincrafted on [Twitter](http://twitter.com/braincrafted) or [App.net](https://alpha.app.net/braincrafted).
 
