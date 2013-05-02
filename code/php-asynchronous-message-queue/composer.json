@@ -1,0 +1,6 @@
+{
+    "require": {
+        "react/socket":                     "0.3.*",
+        "braincrafted/background-process":  "dev-master"
+    }
+}
