@@ -1,11 +1,7 @@
 ---
-layout: default
+layout: post
 title: Running background processes in PHP
 ---
-
-<h2>{{ page.title }}</h2>
-
-*Written and published on {{ page.date | date_to_string }}.*
 
 I often have long running tasks, for example, generating a report or performing an analysis of large amounts of data, that run minutes or even hours. Today I encountered a situation where I needed to start such task from a button in a browser window. Since the task takes three to five hours it was impossible to invoke the task directly.
 

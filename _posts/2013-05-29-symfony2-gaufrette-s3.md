@@ -1,12 +1,7 @@
 ---
-layout: default
+layout: post
 title: Upload files to Amazon S3 with Symfony2 and Gaufrette
 ---
-
-{{ page.title }}
-----------------
-
-*Written and published on {{ page.date | date_to_string }}.*
 
 Often it can be a little bit tricky to upload files to a web server and things become even more complicated when you want to store the uploaded files on Amazon S3. In this article I am going to explain how you can use Gaufrette to upload photos to S3 from a Symfony2 application.
 

@@ -1,12 +1,7 @@
 ---
-layout: default
+layout: post
 title: Implementing an asynchronous message queue in PHP with React
 ---
-
-{{ page.title }}
-----------------
-
-*Written and published on {{ page.date | date_to_string }}.*
 
 Unlike most other programming and scripting languages PHP does not support threads[^pthreads] and threads would be required to implement a truly asynchronous, non-blocking message queue. Challange accepted.
 
@@ -164,7 +159,7 @@ As mentioned above this code is not really useful in a production environment. H
 
 ### BcMq
 
-I created a library from the code described in this article. The principles are the some, but it has a nicer architecture and is tested. You can find it on Github: [BcMq](https://github.com/braincrafted/mq).
+I created a library from the code described in this article. The principles are the same, but it has a nicer architecture and is tested. You can find it on Github: [BcMq](https://github.com/braincrafted/mq).
 
 
 ### BcMqBundle
