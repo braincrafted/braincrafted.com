@@ -1,11 +1,12 @@
 notification :growl
 
 # Ignore the following diretories and files
-ignore %r{^_site/}, /Guardfile/, /config.rb/, /code/
+ignore %r{^_site/}, %r{/Guardfile/}, %r{/config.rb/}, %r{/code/}, %r{/css(-dev)?/}, %r{/js/}
 
 guard :shell do
+
     # When HTML and Markdown files are modified run Jekyll
-    watch /^.*\.(md|htm|html)/ do |m|
+    watch /^.*\.(md|htm|html|xml)/ do |m|
         `make build-jekyll`
         n "Built HTML for braincrafted.com"
         m[0]
