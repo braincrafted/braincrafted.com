@@ -10,7 +10,9 @@ $link-color: #232323;
 
 body {
     color: $link-color;
-    font: 400 1.1em "ff-tisa-web-pro", serif;
+    font: 1.1em Helvetica, arial, freesans, clean, sans-serif;
+    line-height: 1.4;
+    // font: 400 1.1em "ff-tisa-web-pro", serif;
 }
 
 a {
@@ -54,6 +56,14 @@ pre {
     font-size: 0.90em;
 }
 
+code {
+    margin: 0 2px;
+    padding: 0px 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+
 hr {
     border: 1px solid $bc-color;
 }
@@ -81,6 +91,13 @@ input {
 
 .content {
     @extend .wrapper;
+}
+
+table.border {
+    td, th {
+        padding: 6px 13px;
+        border: 1px solid #ccc;
+    }
 }
 
 .project-list, .posts {
