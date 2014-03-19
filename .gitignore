@@ -1,5 +1,7 @@
 /.sass-cache/*
-/_site/*
+/build/*
 /css/*
 /js/*
 /Gemfile.lock
+*.sublime-workspace
+*.sublime-project

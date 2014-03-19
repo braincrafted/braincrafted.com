@@ -155,7 +155,15 @@ class TranslatorCompilerPass implements CompilerPassInterface
 
 Done. We can now write our assertions in functional tests for translation keys instead of translated messages.
 
-I added the code required to disable translation to my [BcTestingBundle](https://github.com/braincrafted/testing-bundle), but I wanted to explain what I did. If there is a more conveniet solution please let me know.
+I added the code required to disable translation to my [BraincraftedTestingBundle](https://github.com/braincrafted/testing-bundle), but I wanted to explain what I did. If there is a more conveniet solution please let me know.
+
+*Update March 19, 2014:* Reader Gilles Doge emailed me to add that you can override the `translator.class` variable only in the `test` environment:
+
+<pre><code class="yaml"># app/config/config_test.yml
+parameters:
+    translator.class: Acme\DemoBundle\Translation\Translator\NoTranslator</code></pre>
+
+In this case you don't need to create an additional compiler pass. However, my solution has the advantage that you can place it in my TestingBundle and have this functionality automatically in all my projects.
 
 Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @braincrafted on [Twitter](http://twitter.com/braincrafted) or [App.net](https://alpha.app.net/braincrafted).
 
