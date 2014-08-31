@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Create a keyboard shortcut to queue songs in Spotify on OS X
+new_url: https://florian.ec/articles/create-a-keyboard-shortcut-to-queue-songs-in-spotify-on-os-x/
 ---
 
 I spent the last hour trying to set the easiest and most reliable way to create a keyboard shortcut for Spotifys *Add to Queue* functionality on OS X. Since I found no solution for this I decided to post it here.

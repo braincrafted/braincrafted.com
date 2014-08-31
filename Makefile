@@ -81,7 +81,7 @@ clean-js:
 
 deploy: clean build
 	@echo "Deploying website to server...          \c"
-	@rsync -avq --delete-after _site/ han:/var/www/braincrafted.com
+	@rsync -avq --delete-after build/ han:/var/www/braincrafted.com
 	@echo "${CHECK} Done"
 
 run-dev:

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Kinda like the opposite of regular expressions
+new_url: https://florian.ec/articles/kinda-like-the-opposite-of-regular-expressions/
 ---
 
 {{ page.title }}

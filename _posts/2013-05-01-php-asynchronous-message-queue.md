@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Implementing an asynchronous message queue in PHP with React
+new_url: https://florian.ec/articles/implementing-an-asynchronous-message-queue-in-php-with-react/
 ---
 
 Unlike most other programming and scripting languages PHP does not support threads[^pthreads] and threads would be required to implement a truly asynchronous, non-blocking message queue. Challange accepted.
